@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ab2d00;
+  --color-primary-container: #ff7851;
+  --color-primary-dim: #962700;
+  --color-secondary: #b5161e;
+  --color-secondary-container: #ffc3bd;
+  --color-secondary-dim: #a40113;
+  --color-tertiary: #72544e;
+  --color-tertiary-container: #eec6bd;
+  --color-tertiary-dim: #654942;
+  --color-surface: #fdf6df;
+  --color-surface-bright: #fdf6df;
+  --color-surface-dim: #dcd5b6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f1d8;
+  --color-surface-container: #efe8ce;
+  --color-surface-container-high: #eae3c7;
+  --color-surface-container-highest: #e4ddc0;
+  --color-surface-variant: #e4ddc0;
+  --color-on-surface: #322f20;
+  --color-on-surface-variant: #5f5c4a;
+  --color-on-primary: #ffefeb;
+  --color-on-secondary: #ffefed;
+  --color-on-tertiary: #ffefec;
+  --color-outline: #7b7764;
+  --color-outline-variant: #b3ad98;
+  
+  --font-headline: var(--font-epilogue);
+  --font-body: var(--font-plus-jakarta-sans);
+  
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+}
+
+:root {
+  --background: #fdf6df;
+  --foreground: #322f20;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  @apply antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-epilogue), sans-serif;
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-surface/80 backdrop-blur-xl border border-white/10;
+}
+
+/* Custom shadow */
+.shadow-ambient {
+  box-shadow: 0 20px 40px rgba(50, 47, 32, 0.06);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hero-bleed {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.editorial-bleed {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.bleed-image {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
