@@ -9,7 +9,7 @@ export default function ContactPage() {
 
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-[50vh] md:min-h-[614px] flex items-center overflow-hidden py-16 md:py-0">
+        <section className="relative min-h-[50vh] md:min-h-screen flex items-center overflow-hidden py-16 md:py-0">
           <div className="absolute inset-0 z-0">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB4Ut4EvNth1Ac68Zl3vMkm13vARGZUjDEpVXNx9yisOULKys_tkQegTO847eZ6WO-god_ezwGxGaDur1e3gYLXt-mJ85vZ_YRtZMpNcVWdQ__RqhW72knmlwPpOEDyF2lI-8n3SALkGpzZJsAyAZmOnWE_hkxOwwbU92lyWxkOAIEHUlV5LYBuE294bN6teINQAg3PJUdR8l7bgk6dj90VBIzyA2qIIj_jnOfWr8B_3qYraxmgWreUIoHbkuQFJY2UFklOENPlw"

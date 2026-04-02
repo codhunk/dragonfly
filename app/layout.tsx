@@ -13,7 +13,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Dragonfly | The Modern Gastronome",
+  title: "Dragonfly | DragonFly",
   description: "A sanctuary for flavor, where heritage meets innovation on every single plate.",
 };
 

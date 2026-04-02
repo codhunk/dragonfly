@@ -32,7 +32,7 @@ export default function AboutPage() {
               Our Passion <br className="hidden md:block" />for <span className="text-primary">Flavor</span>
             </h1>
             <p className="text-base text-on-surface-variant mb-8 font-body">
-              Treating food as art and every guest with the warmth of high hospitality. Discover the heart behind "The Modern Gastronome."
+              Treating food as art and every guest with the warmth of high hospitality. Discover the heart behind "DragonFly."
             </p>
           </motion.div>
         </div>
@@ -209,7 +209,7 @@ export default function AboutPage() {
               <h4 className="text-xl font-bold font-headline text-center md:text-left">Julian Thorne</h4>
               <p className="text-base text-outline font-bold font-body text-center md:text-left">Executive Chef</p>
             </motion.div>
- 
+
             {/* Team Member 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -230,7 +230,7 @@ export default function AboutPage() {
               <h4 className="text-xl font-bold font-headline text-center md:text-left">Elena Rodriguez</h4>
               <p className="text-base text-outline font-bold font-body text-center md:text-left">Sous Chef</p>
             </motion.div>
- 
+
             {/* Kitchen Shot */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -253,7 +253,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
- 
+
       {/* CTA Section */}
       <section className="py-16 px-4 md:px-16 text-center bg-surface">
         <motion.div

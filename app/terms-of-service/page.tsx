@@ -2,8 +2,8 @@ import InfoPageLayout from "@/components/layout/InfoPageLayout";
 
 export default function TermsOfService() {
   return (
-    <InfoPageLayout 
-      title="Terms of Service" 
+    <InfoPageLayout
+      title="Terms of Service"
       subtitle="The professional standard of our culinary agreement."
       heroImage="https://images.unsplash.com/photo-1414235077428-33b07447fbef?auto=format&fit=crop&q=80&w=1920"
     >
@@ -11,11 +11,11 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-3xl font-headline text-primary mb-6">1. Agreement to Terms</h2>
           <p className="text-base italic leading-none tracking-normal text-tertiary mb-8">
-            These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and The Modern Gastronome (we, our, us), concerning your access to and use of our sensory culinary services. 
+            These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and DragonFly (we, our, us), concerning your access to and use of our sensory culinary services.
           </p>
         </section>
 
-        <section className="bg-primary/5 rounded-xl p-8 border border-primary/10">
+        <section className="bg-primary/5 rounded-md p-8 border border-primary/10">
           <h2 className="text-3xl font-headline text-primary mb-6">2. Professional Standards</h2>
           <p className="text-base italic leading-none tracking-normal text-tertiary mb-6">
             By accessing our services, you agree to maintain a professional standard of conduct. We reserve the right to refuse service to any individual whose behavior undermines the sensory experience and safety of our patrons and staff.
@@ -39,14 +39,14 @@ export default function TermsOfService() {
         </section>
 
         <section className="bg-white/40 backdrop-blur-md rounded-md p-10 border border-outline-variant">
-            <h2 className="text-3xl font-headline text-primary mb-6">4. Limitation of Liability</h2>
-            <p className="text-base italic leading-none tracking-normal text-tertiary">
-                The Modern Gastronome shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your access to or use of, or inability to access or use, the services or any content and sensory materials provided.
-            </p>
+          <h2 className="text-3xl font-headline text-primary mb-6">4. Limitation of Liability</h2>
+          <p className="text-base italic leading-none tracking-normal text-tertiary">
+            DragonFly shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your access to or use of, or inability to access or use, the services or any content and sensory materials provided.
+          </p>
         </section>
-        
+
         <section className="text-center pt-8">
-            <p className="text-sm italic opacity-60">Last Updated: March 20, 2024</p>
+          <p className="text-sm italic opacity-60">Last Updated: March 20, 2024</p>
         </section>
       </div>
     </InfoPageLayout>

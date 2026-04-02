@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -18,6 +18,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,17 +75,20 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4 md:gap-6">
             {/* Search Box - Hidden on mobile unless active */}
-            <div className={`relative flex items-center transition-all duration-500 rounded-full bg-surface-container-low border ${isSearchFocused ? "w-48 md:w-64 border-primary ring-2 ring-primary/10 shadow-inner scale-105" : "w-10 md:w-48 border-transparent"
-              }`}>
-              <span className="p-2.5 text-[#ab2d00] shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-search"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+            <div
+              onClick={() => searchInputRef.current?.focus()}
+              className={`relative flex items-center transition-all duration-500 rounded-full bg-surface-container-low border cursor-pointer ${isSearchFocused ? "w-42 md:w-64 border-primary shadow-sm scale-105" : "w-10 md:w-48 border-transparent"
+                }`}>
+              <span className="p-2 text-[#ab2d00] shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-search"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
               </span>
               <input
+                ref={searchInputRef}
                 type="text"
                 placeholder="Search menu..."
                 onFocus={() => setIsSearchFocused(true)}
                 onBlur={() => setIsSearchFocused(false)}
-                className={`bg-transparent border-none focus:ring-0 text-base font-body text-on-surface w-full pr-4 transition-opacity duration-300 ${isSearchFocused ? "opacity-100" : "hidden md:block opacity-50"
+                className={`bg-transparent focus:ring-0 focus:outline-none outline-none text-base font-body text-on-surface pr-4 transition-all duration-300 ${isSearchFocused ? "opacity-100 w-full ml-2" : "opacity-0 w-0 md:w-full md:ml-0 md:opacity-50"
                   }`}
               />
             </div>

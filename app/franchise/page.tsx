@@ -24,7 +24,7 @@ export default function Franchise() {
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {points.map((p, idx) => (
-            <div key={idx} className="bg-white/50 backdrop-blur-md rounded-xl p-8 border border-primary/20 shadow-sm hover:scale-105 transition-transform duration-500">
+            <div key={idx} className="bg-white/50 backdrop-blur-md rounded-md p-8 border border-primary/20 shadow-sm hover:scale-105 transition-transform duration-500">
               <div className="text-primary mb-6">
                 {p.icon}
               </div>

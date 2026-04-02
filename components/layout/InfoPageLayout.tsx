@@ -65,7 +65,7 @@ export default function InfoPageLayout({ title, subtitle, children, heroImage }:
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mt-16 bg-primary rounded-xl p-12 text-center text-on-primary shadow-2xl"
+          className="mt-16 bg-primary rounded-md p-12 text-center text-on-primary shadow-2xl"
         >
           <h2 className="text-3xl md:text-4xl font-headline mb-4">Hungry for Mastery?</h2>
           <p className="mb-8 opacity-90 italic">Explore our artisanal collection of sensory delights and elevate your everyday dining experience today.</p>

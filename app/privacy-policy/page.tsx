@@ -2,8 +2,8 @@ import InfoPageLayout from "@/components/layout/InfoPageLayout";
 
 export default function PrivacyPolicy() {
   return (
-    <InfoPageLayout 
-      title="Privacy Policy" 
+    <InfoPageLayout
+      title="Privacy Policy"
       subtitle="Ensuring your sensory culinary journey remains yours alone."
       heroImage="https://images.unsplash.com/photo-1550966842-30cae01004a6?auto=format&fit=crop&q=80&w=1920"
     >
@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         <section>
           <h2 className="text-3xl font-headline text-primary mb-6">Introduction</h2>
           <p className="text-base italic leading-none tracking-normal text-tertiary mb-8">
-            The Modern Gastronome (we, our, us) is committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at info@moderngastronome.com.
+            DragonFly (we, our, us) is committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at info@moderngastronome.com.
           </p>
         </section>
 
