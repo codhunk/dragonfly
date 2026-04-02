@@ -55,7 +55,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`relative py-1 font-bold text-base transition-all duration-300 ${isActive
-                    ? "text-[#ab2d00] font-black"
+                    ? "text-[#ab2d00] font-bold"
                     : "text-[#72544e] font-bold hover:text-[#ab2d00]"
                     }`}
                 >
@@ -92,7 +92,7 @@ export default function Navbar() {
             {/* CTA Button */}
             <Link
               href="/services"
-              className="hidden sm:block bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-black text-base shadow-xl shadow-primary/20 hover:bg-primary-dim hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              className="hidden sm:block bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold text-base shadow-xl shadow-primary/20 hover:bg-primary-dim hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
             >
               Order Now
             </Link>
@@ -145,12 +145,12 @@ export default function Navbar() {
               className="absolute top-0 right-0 h-full w-[90%] sm:w-[70%] bg-[#fdf6df] shadow-[-20px_0_60px_-15px_rgba(0,0,0,0.1)] p-10 flex flex-col justify-between border-l border-primary/10 overflow-hidden"
             >
               {/* Background Accent Text */}
-              <div className="absolute -left-10 top-1/2 -translate-y-1/2 -rotate-90 pointer-events-none opacity-[0.03]">
-                <span className="text-[15rem] font-black font-headline whitespace-nowrap">DRAGONFLY</span>
-              </div>
+              {/* <div className="absolute -left-10 top-1/2 -translate-y-1/2 -rotate-90 pointer-events-none opacity-[0.03]">
+                <span className="text-[15rem] font-bold font-headline whitespace-nowrap">DRAGONFLY</span>
+              </div> */}
 
               <div className="relative z-10">
-                <div className="flex justify-between items-center mb-16">
+                <div className="flex justify-between items-center mb-6">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                     <Link href="/">
@@ -172,16 +172,16 @@ export default function Navbar() {
                         href={link.href}
                         className="flex items-start gap-4 group-hover:gap-6 transition-all duration-500"
                       >
-                        <span className="text-base font-black font-headline text-primary opacity-40 mt-2">{link.id}</span>
+                        <span className="text-sm font-bold font-headline text-primary opacity-40 mt-2">{link.id}</span>
                         <div>
-                          <span className={`block text-xl font-bold font-headline transition-colors ${pathname === link.href ? "text-[#ab2d00]" : "text-[#72544e] group-hover:text-[#ab2d00]"
+                          <span className={`block text-base font-bold font-headline transition-colors ${pathname === link.href ? "text-[#ab2d00]" : "text-[#72544e] group-hover:text-[#ab2d00]"
                             }`}>
                             {link.name}
                           </span>
                           <motion.div
-                            className={`block h-1 bg-primary/20 mt-1 origin-left transition-all duration-500 ${pathname === link.href ? "w-full opacity-100" : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"}`}
+                            className={`block h-0.5 bg-primary/20 mt-1 origin-left transition-all duration-500 ${pathname === link.href ? "w-full opacity-100" : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"}`}
                           />
-                          <span className="text-base font-medium text-outline-variant mt-2 block opacity-60">
+                          <span className="text-sm font-medium text-outline-variant mt-2 block opacity-60">
                             {link.desc}
                           </span>
                         </div>
@@ -191,42 +191,42 @@ export default function Navbar() {
                 </nav>
               </div>
 
-              <div className="relative z-10 pt-10 border-t border-primary/10">
-                <div className="space-y-8 mb-10">
-                  <div className="grid grid-cols-2 gap-8">
+              <div className="relative z-10 pt-4 border-t border-primary/10">
+                <div className="space-y-4 mb-4">
+                  <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <span className="text-base font-bold text-primary block opacity-60">Reservation</span>
-                      <p className="text-on-surface font-black text-base">+1 555 012 3456</p>
+                      <span className="text-sm font-bold text-primary block opacity-60">Reservation</span>
+                      <p className="text-on-surface font-bold text-sm">+1 555 012 3456</p>
                     </div>
                     <div className="space-y-2 text-right">
-                      <span className="text-base font-bold text-primary block opacity-60">Address</span>
-                      <p className="text-on-surface font-black text-base text-right line-clamp-1">842 Artisan Avenue</p>
+                      <span className="text-sm font-bold text-primary block opacity-60">Address</span>
+                      <p className="text-on-surface font-bold text-sm text-right line-clamp-1">842 Artisan Avenue</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4 bg-primary/5 p-4 rounded-2xl border border-primary/10">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                    {/* <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                       <span className="material-symbols-outlined text-base">schedule</span>
-                    </div>
+                    </div> */}
                     <div>
-                      <span className="block text-base font-bold text-primary">Now Serving</span>
-                      <p className="text-base font-bold text-on-surface">Mon - Sun (10am - 11pm)</p>
+                      <span className="block text-sm font-bold text-primary">Now Serving</span>
+                      <p className="text-sm font-bold text-on-surface">Mon - Sun (10am - 11pm)</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3">
                   <Link
                     href="/services"
-                    className="group w-full bg-[#ab2d00] text-white py-5 rounded-2xl text-center font-black text-lg shadow-2xl shadow-[#ab2d00]/30 active:scale-95 transition-all overflow-hidden relative"
+                    className="group w-full bg-[#ab2d00] text-white py-4 rounded-md text-center font-bold text-base shadow-2xl shadow-[#ab2d00]/30 active:scale-95 transition-all overflow-hidden relative"
                   >
                     <span className="relative z-10 text-base">Pre-Order Now</span>
-                    <motion.div
+                    {/* <motion.div
                       className="absolute inset-0 bg-white/10 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"
-                    />
+                    /> */}
                   </Link>
 
-                  <div className="flex justify-center gap-8 pt-6 border-t border-primary/5">
+                  <div className="flex justify-center gap-8 pt-4 border-t border-primary/5">
                     {["camera", "play_circle", "share"].map((icon, i) => (
                       <a key={i} className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm group" href="#">
                         <span className="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">{icon}</span>

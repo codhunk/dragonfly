@@ -20,20 +20,20 @@ export default function Footer() {
         <div className="space-y-4">
           <h4 className="font-bold text-[#ab2d00] text-base font-body">Quick Links</h4>
           <ul className="space-y-2">
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Our Story</li>
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Careers</li>
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Franchise</li>
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Blog</li>
+            <Link href="/about" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Our Story</Link>
+            <Link href="/careers" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Careers</Link>
+            <Link href="/franchise" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Franchise</Link>
+            <Link href="/blog" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Blog</Link>
           </ul>
         </div>
 
         <div className="space-y-4">
           <h4 className="font-bold text-[#ab2d00] text-base font-body">Legal</h4>
           <ul className="space-y-2">
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Privacy Policy</li>
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Terms of Service</li>
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Nutrition Info</li>
-            <li className="text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Locations</li>
+            <Link href="/privacy-policy" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Terms of Service</Link>
+            <Link href="/nutrition" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Nutrition Info</Link>
+            <Link href="/locations" className="block text-[#72544e] text-base font-body hover:translate-x-1 transition-transform cursor-pointer">Locations</Link>
           </ul>
         </div>
 

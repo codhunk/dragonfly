@@ -1,14 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
-      <Navbar />
 
       <div className="pt-20">
         {/* Hero Section */}
@@ -44,24 +41,24 @@ export default function ContactPage() {
         </section>
 
         {/* Main Content Grid */}
-        <section className="max-w-7xl mx-auto px-4 md:px-16 pb-32">
+        <section className="max-w-7xl mx-auto px-4 md:px-12 pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Contact Form Column */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-7 bg-surface-container-lowest p-6 md:p-12 rounded-[2rem] shadow-sm border border-outline-variant/10"
+              className="lg:col-span-7 bg-surface-container-lowest/50 p-6 md:p-10 rounded-[1rem] shadow-sm border border-outline-variant/10"
             >
-              <h2 className="text-2xl md:text-3xl font-headline font-black mb-8 md:mb-10 text-center md:text-left">Send a Message</h2>
+              <h2 className="text-2xl md:text-3xl font-headline font-black mb-6 md:mb-8 text-center md:text-left">Send a Message</h2>
               <form className="space-y-6 md:space-y-8" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div className="relative group">
                     <label className="block text-base font-bold text-outline mb-2 ml-1 font-body">Full Name</label>
                     <input
                       type="text"
                       placeholder="Gastronome Doe"
-                      className="w-full bg-surface-container-low border-none rounded-[1.2rem] p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder:text-outline-variant font-body text-base"
+                      className="w-full bg-gray-50 border-none rounded-[1rem] p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder:text-outline-variant font-body text-base"
                     />
                   </div>
                   <div className="relative group">
@@ -69,16 +66,24 @@ export default function ContactPage() {
                     <input
                       type="email"
                       placeholder="hello@gastronome.com"
-                      className="w-full bg-surface-container-low border-none rounded-[1.2rem] p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder:text-outline-variant font-body text-base"
+                      className="w-full bg-gray-50 border-none rounded-[1rem] p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder:text-outline-variant font-body text-base"
                     />
                   </div>
+                </div>
+                <div className="relative group">
+                  <label className="block text-base font-bold text-outline mb-2 ml-1 font-body">Mobile Number</label>
+                  <input
+
+                    placeholder="+91 9356845123"
+                    className="w-full bg-gray-50 border-none rounded-[1rem] p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface resize-none placeholder:text-outline-variant font-body text-base"
+                  ></input>
                 </div>
                 <div className="relative group">
                   <label className="block text-base font-bold text-outline mb-2 ml-1 font-body">Your Message</label>
                   <textarea
                     rows={6}
                     placeholder="Tell us about your culinary cravings..."
-                    className="w-full bg-surface-container-low border-none rounded-[1.2rem] p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface resize-none placeholder:text-outline-variant font-body text-base"
+                    className="w-full bg-gray-50 border-none rounded-[1rem] p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface resize-none placeholder:text-outline-variant font-body text-base"
                   ></textarea>
                 </div>
                 <button className="w-full md:w-auto px-12 py-4 bg-primary text-on-primary rounded-full font-black text-lg hover:scale-105 transition-all shadow-lg shadow-primary/20 active:scale-95 font-headline">
@@ -101,21 +106,21 @@ export default function ContactPage() {
                   { icon: "mail", title: "Email Us", content: "concierge@gastronome.com", sub: "Expect a reply within 24h" },
                   { icon: "location_on", title: "Visit Us", content: "842 Artisan Avenue", sub: "New York, NY 10012" }
                 ].map((item, i) => (
-                  <div key={i} className="bg-surface-container p-6 md:p-8 rounded-[1.5rem] flex gap-5 md:gap-6 items-start border border-outline-variant/10 shadow-sm transition-transform hover:translate-x-2">
+                  <div key={i} className="bg-surface-container p-6 md:p-8 rounded-[1rem] flex gap-5 md:gap-6 items-start border border-outline-variant/10 shadow-sm transition-transform hover:translate-x-2">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary flex-shrink-0">
                       <span className="material-symbols-outlined text-xl md:text-2xl">{item.icon}</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-tertiary mb-1 font-body text-base">{item.title}</h4>
-                      <p className="text-lg md:text-xl font-headline font-black text-on-surface">{item.content}</p>
-                      <p className="text-base text-on-surface-variant mt-1 font-body">{item.sub}</p>
+                      <h4 className="font-bold text-tertiary mb-1 font-bold text-sm">{item.title}</h4>
+                      <p className="text-base md:text-lg font-headline font-bold text-on-surface">{item.content}</p>
+                      <p className="text-sm text-on-surface-variant mt-1 font-bold">{item.sub}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Social Presence */}
-              <div className="bg-primary-container p-8 rounded-[1.5rem] shadow-ambient text-center lg:text-left">
+              <div className="bg-primary-container p-8 rounded-[1rem] shadow-ambient text-center lg:text-left">
                 <h4 className="font-headline font-black text-on-primary-container text-xl mb-6">Join Our Social Table</h4>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                   {["camera", "social_leaderboard", "play_circle", "share"].map((icon, i) => (
@@ -131,7 +136,7 @@ export default function ContactPage() {
 
         {/* Location Section */}
         <section className="relative w-full h-[400px] md:h-[500px] bg-surface-container-low overflow-hidden mt-12">
-          <div className="absolute inset-0 grayscale opacity-70 hover:grayscale-0 transition-all duration-700">
+          <div className="absolute inset-0 transition-all duration-700">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzu6o9lJae8VteBB4LHST2fRyUtfvdRJZVUcUzMeGQTnXh0NTX4AkNyzJBCkCBQ4_EeK7fKmFloQ9zEV5mRrONMdx12AVwCQZn0iij8MM0DxzZTNTHUxhcwj6e9xVaP2-vwwMqbQ6j5Rg3R9T538JS_Y_gH1ZuWvfdOdXDM8rQfYeLw1EiCLKmyMUZ1pWo2CnYL6dC7ujwED8JOuuNKYQo7zW7DY-RFornXMX41TtWkEL3r2PMt2rDgJQxmH982t0qNhBuMnEwEw"
               alt="New York Map"
@@ -146,7 +151,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="absolute bottom-8 left-4 md:bottom-12 md:left-24 z-20 w-[calc(100%-2rem)] md:w-auto"
           >
-            <div className="glass-card p-6 md:p-8 rounded-[1.5rem] max-w-sm border border-white/20 shadow-2xl backdrop-blur-md bg-white/80">
+            <div className="glass-card p-6 md:p-8 rounded-[1rem] max-w-sm border border-white/20 shadow-2xl backdrop-blur-md bg-white/80">
               <h5 className="font-headline font-black text-xl mb-2">Our Main Bistro</h5>
               <p className="text-base text-on-surface-variant mb-4 font-body">Located in the heart of the city's culinary hub, just steps away from Central Park South.</p>
               <a className="inline-flex items-center gap-2 text-primary font-bold text-base hover:gap-4 transition-all font-body" href="#">
@@ -159,8 +164,6 @@ export default function ContactPage() {
           <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_100px_rgba(253,246,223,1)]"></div>
         </section>
       </div>
-
-      <Footer />
     </main>
   );
 }

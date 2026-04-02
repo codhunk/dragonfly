@@ -1,14 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-surface selection:bg-secondary-container selection:text-on-secondary-container">
-      <Navbar />
 
       {/* Hero Section */}
       <header className="relative pt-32 pb-16 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
@@ -37,7 +34,7 @@ export default function ServicesPage() {
             className="relative h-[300px] md:h-[500px]"
           >
             <div className="absolute -top-12 -right-12 w-48 h-48 md:w-64 md:h-64 bg-tertiary-container rounded-full blur-3xl opacity-40"></div>
-            <div className="relative w-full h-full bleed-image overflow-hidden rounded-xl shadow-2xl z-10 border border-white/20">
+            <div className="relative w-full h-full bleed-image overflow-hidden rounded-md shadow-2xl z-10 border border-white/20">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOEB1rU1baLE6sPY8xmIN66US4zhHzp76zwT_XQAUgXKeIz_J7kmqKuBFaimhqD2ABcycixF0qiMA8b5BDhXzSsCtIR9yTFs-5b2YpBBtfDE8mSOP7XM6T7-vgPlXJTGxl8ykpu2DH6D3v2FrT_-6AQh0yq5gxyuZaekRxP8oDIq1vncZkO-O-y7oD2IQ9nzjSfk2oqCyG2PBrEcR2EecAyCeaGmeO-rsluoteNjjFgQdYd7bYiQgJ2X8i63Gtrl7XGqiOwTvmDA"
                 alt="Latte and beans"
@@ -117,14 +114,14 @@ export default function ServicesPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* Burger Large Card */}
-              <div className="group relative h-[400px] md:h-[510px] rounded-xl overflow-hidden p-6 md:p-8 flex flex-col justify-end shadow-ambient">
+              <div className="group relative h-[400px] md:h-[510px] rounded-md overflow-hidden p-6 md:p-8 flex flex-col justify-end shadow-ambient">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2BG3EQJBywbyF8mka8VTGzsoreqUtEIFFIgjs8WPCXDhG8p77WMNRu9MsFZtp2axuckDSaR-OiSinx2yniBbpSKd6Ho_ZQYbU23P-rDiWuQVuxQTir-rL-eApvIkDC9zKwK_TnomMOddhFKo19iHSacUZWpN0PB7Ctq_wtJOXubEiC9jmPGjUGYfY5PsnovFcnmGGIpC3qFYfuu1849dp5axavAWBAhvLXXUXIkJwBm7-y0Npm1YHxej_NSot6FQPJPs4n1pFsw"
                   alt="Gastronome Classic"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-75 group-hover:brightness-90"
                 />
-                <div className="relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-6 rounded-xl border border-outline-variant/10 shadow-xl">
+                <div className="relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-6 rounded-md border border-outline-variant/10 shadow-xl">
                   <h3 className="font-headline text-xl md:text-2xl font-black text-on-surface">The Gastronome Classic</h3>
                   <p className="text-on-surface-variant text-base my-2 font-body">Aged cheddar, truffle aioli, and caramelized balsamic onions.</p>
                   <div className="flex justify-between items-center mt-4">
@@ -136,7 +133,7 @@ export default function ServicesPage() {
                 </div>
               </div>
               {/* Burger Secondary Card */}
-              <div className="group bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col border border-outline-variant/10">
+              <div className="group bg-surface-container-lowest rounded-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col border border-outline-variant/10">
                 <div className="h-48 md:h-56 relative overflow-hidden">
                   <Image
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyxD4-mEMDQUEugalNQty4kdD0TZARnuxpgcsuPM8wVrnpDRe6xs2guSZcZ2iO7kUcv2PzV6Hks_1d8EaIODfFdrXKULsRTEW3dXBvcbuTH8Rz-EM-k6OCI8tRZLCI4Td9Cnmz7JkAglP8qC5dAoAmSidVex7YcaHqh0_yBEuIFCgOgSdq9A8J0SuxCcMyyaatJtWMCeZiQVHgD4-cROR13FtW7drMB996ayYBk9hx4bEV1CF6H66pTHBMjzrmjcFGLc4txuF-dA"
@@ -160,7 +157,7 @@ export default function ServicesPage() {
               <h2 className="font-headline text-3xl md:text-5xl font-black text-on-background">Himalayan Momos</h2>
               <p className="text-on-surface-variant font-label text-base mt-2 font-bold">Steamed to Perfection</p>
             </div>
-            <div className="bg-surface-container-high/50 backdrop-blur-sm rounded-xl p-4 md:p-6 space-y-4 border border-outline-variant/10">
+            <div className="bg-surface-container-high/50 backdrop-blur-sm rounded-md p-4 md:p-6 space-y-4 border border-outline-variant/10">
               <MomoItem
                 name="Alpine Chicken"
                 description="Minced chicken with mountain herbs."
@@ -185,7 +182,7 @@ export default function ServicesPage() {
 
         {/* Tea Section */}
         <section>
-          <div className="bg-tertiary text-on-tertiary rounded-xl p-8 md:p-16 lg:p-20 overflow-hidden relative shadow-2xl">
+          <div className="bg-tertiary text-on-tertiary rounded-md p-8 md:p-16 lg:p-20 overflow-hidden relative shadow-2xl">
             <div className="absolute top-0 right-0 w-full md:w-1/3 h-[200px] md:h-full opacity-30 md:opacity-20 z-0">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZAC4Oe56fGB0hjiJOImmUVv4eCDvEMavdAYx1CY5FkSCR1TsGt95hMJTaTEneGODjUc_mRugWDs2DEot-rl7YsLmscGXlCzdjS1v6hhcSFFlpXkktomXhPFYEU75HsvTWR5WmOnkvhFFSZ8X_FAWT-Tj8AbKSEe-fB2flDqfpGwJFgb7BPGcNEtB7moKEBsTLC4_hkjyc0Md-ahZqzu3g0QhH_I-jeQGxTeKi8MDC4qbllI_vllksl5cr6gZgEPpsOcLAnaadLQ"
@@ -223,9 +220,9 @@ export default function ServicesPage() {
         <section>
           <div className="flex flex-col lg:flex-row justify-between items-center mb-16 gap-8 text-center md:text-left">
             <h2 className="font-headline text-3xl md:text-5xl font-black text-on-background">Snacks & Beverages</h2>
-            <div className="flex flex-wrap justify-center bg-surface-container-high p-1.5 rounded-full border border-outline-variant/10 shadow-inner">
+            <div className="flex flex-wrap justify-center bg-surface-container-high p-1.5 rounded-md border border-outline-variant/10 shadow-inner">
               {["Snacks", "Iced Drinks", "Shakes"].map((tab, idx) => (
-                <button key={tab} className={`px-6 md:px-8 py-2.5 rounded-full font-black font-headline text-base transition-all ${idx === 0 ? "bg-surface-container-lowest shadow-md text-primary" : "opacity-50 hover:opacity-100"}`}>
+                <button key={tab} className={`px-6 md:px-8 py-2.5 rounded-md font-black font-headline text-base transition-all ${idx === 0 ? "bg-surface-container-lowest shadow-md text-primary" : "opacity-50 hover:opacity-100"}`}>
                   {tab}
                 </button>
               ))}
@@ -256,8 +253,6 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </main>
   );
 }
@@ -268,7 +263,7 @@ function CoffeeCard({ name, price, image, description, tag }: { name: string, pr
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-outline-variant/10 shadow-sm"
+      className="group bg-surface-container-lowest rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-outline-variant/10 shadow-sm"
     >
       <div className="relative h-64 md:h-72 overflow-hidden">
         <Image
@@ -303,9 +298,9 @@ function MomoItem({ name, description, price, image }: { name: string, descripti
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="flex flex-col sm:flex-row gap-4 items-center bg-surface-container-lowest p-4 rounded-xl group hover:translate-x-2 transition-transform shadow-sm border border-outline-variant/10 text-center sm:text-left"
+      className="flex flex-col sm:flex-row gap-4 items-center bg-surface-container-lowest p-4 rounded-md group hover:translate-x-2 transition-transform shadow-sm border border-outline-variant/10 text-center sm:text-left"
     >
-      <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-xl overflow-hidden shrink-0 shadow-md">
+      <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-md overflow-hidden shrink-0 shadow-md">
         <Image src={image} alt={name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
       </div>
       <div className="flex-1">
@@ -328,7 +323,7 @@ function SnackCard({ name, price, image }: { name: string, price: string, image:
       viewport={{ once: true }}
       className="group cursor-pointer text-center md:text-left"
     >
-      <div className="aspect-square bg-surface-container-lowest rounded-xl overflow-hidden mb-4 shadow-lg border border-outline-variant/10 relative">
+      <div className="aspect-square bg-surface-container-lowest rounded-md overflow-hidden mb-4 shadow-lg border border-outline-variant/10 relative">
         <Image src={image} alt={name} width={400} height={400} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors pointer-events-none"></div>
       </div>

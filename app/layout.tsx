@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "A sanctuary for flavor, where heritage meets innovation on every single plate.",
 };
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +30,14 @@ export default function RootLayout({
       lang="en"
       className={`${epilogue.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      </head>
+      <body className="min-h-full flex flex-col bg-surface">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

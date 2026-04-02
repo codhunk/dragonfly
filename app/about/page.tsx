@@ -1,15 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background text-on-surface selection:bg-primary/20 selection:text-primary">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:h-[819px] flex items-center overflow-hidden bg-surface-container pt-32 pb-16 md:pt-20 md:pb-0">
@@ -212,7 +209,7 @@ export default function AboutPage() {
               <h4 className="text-xl font-bold font-headline text-center md:text-left">Julian Thorne</h4>
               <p className="text-base text-outline font-bold font-body text-center md:text-left">Executive Chef</p>
             </motion.div>
-
+ 
             {/* Team Member 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -233,7 +230,7 @@ export default function AboutPage() {
               <h4 className="text-xl font-bold font-headline text-center md:text-left">Elena Rodriguez</h4>
               <p className="text-base text-outline font-bold font-body text-center md:text-left">Sous Chef</p>
             </motion.div>
-
+ 
             {/* Kitchen Shot */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -256,7 +253,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+ 
       {/* CTA Section */}
       <section className="py-16 px-4 md:px-16 text-center bg-surface">
         <motion.div
@@ -273,8 +270,6 @@ export default function AboutPage() {
           </div>
         </motion.div>
       </section>
-
-      <Footer />
     </main>
   );
 }

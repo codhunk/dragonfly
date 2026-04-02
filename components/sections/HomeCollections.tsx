@@ -40,7 +40,7 @@ export default function HomeCollections() {
             <span className="text-primary-fixed font-bold text-sm font-body">Signature</span>
             <h3 className="text-2xl md:text-3xl font-bold text-white mt-1 font-headline">Gourmet Burgers</h3>
             <div className="flex flex-wrap gap-2 mt-4 font-body">
-              <span className="bg-secondary-container/20 backdrop-blur-md text-on-secondary px-3 py-1 rounded-full text-base font-semibold">Wagyu Beef</span>
+              <span className="bg-secondary-container/20 backdrop-blur-md text-on-secondary px-3 py-1 rounded-full text-base font-semibold">Wagyu Chicken</span>
               <span className="bg-secondary-container/20 backdrop-blur-md text-on-secondary px-3 py-1 rounded-full text-base font-semibold">Vegan Options</span>
             </div>
           </div>

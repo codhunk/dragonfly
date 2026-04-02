@@ -1,5 +1,3 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import HomeHero from "@/components/sections/HomeHero";
 import HomeCollections from "@/components/sections/HomeCollections";
 import HomeFavorites from "@/components/sections/HomeFavorites";
@@ -10,14 +8,12 @@ import HomeTestimonials from "@/components/sections/HomeTestimonials";
 export default function Home() {
   return (
     <main className="min-h-screen bg-surface selection:bg-primary/20 selection:text-primary">
-      <Navbar />
       <HomeHero />
       <HomeCollections />
       <HomeFavorites />
       <HomeFeatures />
       <HomeWeekendFeast />
       <HomeTestimonials />
-      <Footer />
       
       {/* FAB for Quick Order on Mobile */}
       <button className="fixed bottom-8 right-8 bg-primary text-on-primary w-16 h-16 rounded-full shadow-2xl flex items-center justify-center lg:hidden z-40 active:scale-95 transition-transform">
